@@ -4,6 +4,12 @@ function createUserSection(req, user, action) {
     req.session.save(action);
 }
 
+function destroyUserAuthSession(req) {
+    req.session.uid = null;
+    
+}
+
 module.exports = {
-    createUserSection: createUserSection
+    createUserSection: createUserSection,
+    destroyUserAuthSession: destroyUserAuthSession
 }
