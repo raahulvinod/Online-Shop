@@ -10,4 +10,6 @@ router.post('/signup', authContoller.signup);
 
 router.get('/login', authContoller.getLogin);
 
+router.post('/login', authContoller.login);
+
 module.exports = router;
