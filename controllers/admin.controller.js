@@ -1,3 +1,5 @@
+const Product = require('../models/product.model');
+
 function getProducts(req, res) {
     res.render('admin/products/all-products');
 }
@@ -6,11 +8,20 @@ function getNewProduct(req, res) {
     res.render('admin/products/new-products');
 }
 
-function createNewProduct(req, res) {
-    console.log(req.body);
-    console.log(req.file);
+async function createNewProduct(req, res, next) {
+    const product = new Product({
+        ...req.body,
+        image: req.file.filename
+    });
 
-    res.render('admin/products/all-products');
+    try {
+        product.save();
+    } catch(error) {
+        next(error);
+        return
+    }
+
+     res.redirect('/admin/products');
 }
 
 module.exports = {
