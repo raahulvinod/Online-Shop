@@ -40,6 +40,10 @@ main {
     margin: 0 var(--space-2);
 }
 
+.nav-items li a:hover {
+    color: #f9db19;
+}
+
 .nav-items button {
     cursor: pointer;
     font: inherit;
@@ -74,7 +78,7 @@ main {
     left: 0;
     height: calc(100vh - 5rem);
     width: 100%;
-    background-color: var(--color-gray-700);
+    background-color: #434242;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -93,7 +97,12 @@ main {
 #mobile-menu .nav-items a,
 #mobile-menu .nav-items button {
     font-size: 1.75rem;
-    color: var(--color-primary-100);
+    color: white;
+}
+
+#mobile-menu .nav-items a:hover,
+#mobile-menu .nav-items button:hover {
+    color: rgb(214, 141, 22);
 }
 
 @media (min-width: 48rem) {
