@@ -29,7 +29,7 @@ html {
 
     --color-background-primary: #EEEEEE;
     --color-primary-blue: #4B56D2;
-    --color--blue-light: #537FE7;
+    --color--blue-light: #3C79F5;
     --color--blue-dark: #4973d4;
   
     --space-1: 0.25rem;
@@ -45,8 +45,10 @@ html {
 }
 
 body {
-    background-color: var(--color-gray-500);
-    color: var(--color-gray-100);
+    /* background-color: var(--color-gray-500); */
+    background-color: #EFF5F5;
+    /* color: var(--color-gray-100); */
+    color: #333;
     margin: 0;
 }
 
@@ -65,23 +67,15 @@ ol {
 
 a {
     text-decoration: none;
-    color: var(--color-primary-400);
+    /* color: var(--color-primary-400); */
+    color: white;
 }
 
 .btn {
     cursor: pointer;
     font: inherit;
     padding: var(--space-2) var(--space-4);
-    background-color: var(--color-primary-500);
-    color: var(--color-primary-500-contrast);
-    border: 1px solid  var(--color-primary-500);
     border-radius: var(--border-radius-small);
-}
-
-.btn:hover,
-.btn:active {
-    background-color: var(--color-primary-700);
-    border-color: var(--color-primary-700);
 }
 
 .btn-alt {
@@ -92,4 +86,48 @@ a {
 .btn-alt:hover,
 .btn-alt:active {
     background-color: var(--color-primary-500-bg);
+}
+
+.btn-delete {
+    background-color: #de5732;
+    border: 1px solid #EB6440;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #d94a22;
+}
+
+.btn-edit {
+    background-color: #FFE15D;
+    border: 1px solid #fee440;
+    color: black;
+}
+
+.btn-edit:hover {
+    background-color: #f9db19;
+}
+
+.btn-save {
+    background-color: #82CD47;
+    border: 1px solid #82CD47;
+    padding: var(--space-2) var(--space-8);
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #6dbe2e;
+}
+
+.btn-normal {
+    background-color: #434242;
+    color: white;
+}
+
+.btn-normal:hover {
+    background-color: #2e2d2d;
+}
+
+.btn-large {
+    padding: var(--space-2) var(--space-8);
 }

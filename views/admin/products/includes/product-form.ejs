@@ -5,10 +5,14 @@
         <label for="title">Title</label>
         <input type="text" id="title" name="title" value="<%= product.title %>" required>
     </p>
-    <p>
+    <div id="image-upload-control">
+     <p>
         <label for="image">Image</label>
         <input type="file" id="image" name="image" accept="image/jpg, image/jpeg, image/png" <% if (imageRequired) { %>required<% } %>>
-    </p>
+    </p>  
+    <img src="" alt="Selected image"> 
+    </div>
+    
     <p>
         <label for="summary">Summary</label>
         <input type="text" id="summary" name="summary" value="<%= product.summary %>" required maxlength="250">
@@ -22,7 +26,7 @@
         <textarea id="description" name="description"  rows="7" required><%= product.description %></textarea>
     </p>
     <p>
-        <button type="reset" class="btn btn-alt">Reset</button>
-        <button class="btn">Save</button>
+        <button type="reset" class="btn btn-normal">Reset</button>
+        <button class="btn btn-large btn-edit">Save</button>
     </p>
 </form>
