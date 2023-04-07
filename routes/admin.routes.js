@@ -16,7 +16,7 @@ router.get('/products/:id', adminController.getUpdateProduct);
 
 router.post('/products/:id', imageUploadMiddileware, adminController.updateProduct);
 
-
+router.delete('/products/:id', adminController.deleteProduct);
 
 
 

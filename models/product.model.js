@@ -31,7 +31,7 @@ class Product {
                 delete productData.image;
             }
 
-            await db.getDb().collection('products').updateOne({_id: productId}, {
+            await db.getDb().collection('products').updateOne({ _id: productId }, {
                 $set: productData
             });
         } else {
@@ -78,8 +78,13 @@ class Product {
     async replaceImage(newImage) {
         this.image = newImage;
         this.updateImageData();
-     }
-    
+    }
+
+    remove() {
+        const productId = new mongodb.ObjectId(this.id);
+        return db.getDb().collection('products').deleteOne({_id: productId});
+    }
+
 }
 
 module.exports = Product;
