@@ -5,7 +5,7 @@
         <h2><%= product.title %></h2> 
         <div class="product-item-actions">
        <a class="btn btn-edit" href="/admin/products/<%= product.id %>">View & Edit</a>
-       <button class="btn btn-delete">Delete</button>
+       <button class="btn btn-delete" data-productid="<%= product.id %>" data-csrf="<%= locals.csrfToken %>">Delete</button>
     </div>
     </div>
     
