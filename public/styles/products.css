@@ -36,3 +36,32 @@
     margin-top: var(--space-4);
     justify-content: center;
 }
+
+#product-details img {
+    min-width: 40%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: var(--border-radius-medium);
+    border: 1px solid var(--color-gray-100);
+}
+
+#product-info {
+    text-align: center;
+}
+
+#product-description {
+    white-space: pre-wrap;
+}
+
+@media (min-width: 48rem) {
+  
+    #product-details img {
+      width: 40%;
+      height: 20rem;
+      margin: var(--space-8);
+    }
+  
+    #product-info {
+      text-align: left;
+    }
+  }
