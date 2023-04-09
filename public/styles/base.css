@@ -127,3 +127,11 @@ a {
 .btn-large {
     padding: var(--space-2) var(--space-8);
 }
+
+.badge {
+    margin-left: var(--space-2);
+    padding: 0.15rem var(--space-4);
+    border-radius: 10rem;
+    background-color: #FFE15D;
+    color: #333;
+}
