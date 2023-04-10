@@ -38,11 +38,17 @@
     font-family: Arial, Helvetica, sans-serif;
 } 
 
-.cart-final {
+#cart-final {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#cart-final #cart-total-fallback {
+    font-size: 1rem;
+    font-weight: normal;
+    color: rgb(190, 69, 69);
 }
 
 @media (min-width: 48rem) {
@@ -51,10 +57,16 @@
         justify-content: space-between;
     }
 
-    .cart-final {
+    #cart-final {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    #cart-final #cart-total-fallback {
+        font-size: 1rem;
+        font-weight: normal;
+        color: rgb(190, 69, 69);
     }
     
 }
