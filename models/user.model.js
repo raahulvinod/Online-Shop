@@ -1,21 +1,31 @@
 const bcrypt = require('bcryptjs');
+const mongodb = require('mongodb');
 
 const db = require('../data/database');
 
 class User {
     constructor(email, password, fullname, street, postal, city) {
         this.email = email,
-        this.password = password,
-        this.name = fullname,
-        this.address = {
-            street: street,
-            postalCode: postal,
-            city: city
-        };
+            this.password = password,
+            this.name = fullname,
+            this.address = {
+                street: street,
+                postalCode: postal,
+                city: city
+            };
+    }
+
+    static findById(userId) {
+        const uid = new mongodb.ObjectId(userId);
+
+        return db
+            .getDb()
+            .collection('users')
+            .findOne({ _id: uid }, { projection: {password: 0} });
     }
 
     getUserWithSameEmail() {
-       return db.getDb().collection('users').findOne({ email: this.email});
+        return db.getDb().collection('users').findOne({ email: this.email });
     }
 
     async existsAlready() {
