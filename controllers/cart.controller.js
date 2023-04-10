@@ -33,11 +33,11 @@ function updateCartItem(req, res) {
     res.json({
         message: 'Item updated!',
         updateCartData: {
-            newTOtalQuantity: cart.totalQuantity,
-            newTotalPrice: cart.newTotalPrice,
-            updatedItemPrice: updatedItemData.updatedItemPrice
-        }
-    })
+            newTotalQuantity: cart.totalQuantity,
+            newTotalPrice: cart.totalPrice,
+            updatedItemPrice: updatedItemData.updatedItemPrice,
+        },
+    });
 }
 
 module.exports = {
