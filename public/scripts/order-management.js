@@ -36,7 +36,7 @@ const updateOrderFormElements = document.querySelectorAll(
   
     const responseData = await response.json();
   
-    form.parentElement.parentElement.querySelector('.badge').textContent =
+    form.parentElement.parentElement.querySelector('.order-status').textContent =
       responseData.newStatus.toUpperCase();
   }
   
