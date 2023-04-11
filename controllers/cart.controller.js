@@ -9,7 +9,7 @@ async function addCartItem(req, res, next) {
     try {
         product = await Product.findById(req.body.productId)
 
-    } catch(error) {
+    } catch (error) {
         next(error);
         return;
     }
@@ -27,7 +27,10 @@ async function addCartItem(req, res, next) {
 function updateCartItem(req, res) {
     const cart = res.locals.cart;
 
-    const updatedItemData = cart.updateItem(req.body.productId, req.body.quantity);
+    const updatedItemData = cart.updateItem(
+        req.body.productId,
+        +req.body.quantity
+        );
     req.session.cart = cart;
 
     res.json({
