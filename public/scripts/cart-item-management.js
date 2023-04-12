@@ -37,7 +37,6 @@ async function updateCartItem(event) {
     }
 
     const responseData = await response.json();
-    console.log(responseData);
 
     if (responseData.updateCartData.updatedItemPrice ===0) {
         form.parentElement.parentElement.remove();

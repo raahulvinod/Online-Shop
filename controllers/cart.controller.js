@@ -1,7 +1,7 @@
 const Product = require("../models/product.model");
 
 function getCart(req, res) {
-    res.render('customer/carts/cart');
+     res.render('customer/carts/cart');
 }
 
 async function addCartItem(req, res, next) {
